@@ -40,9 +40,31 @@ TXT, $result);
         $result = (new ChristmasTree())->print(2);
 
         self::assertSame(<<<TXT
- x
+ x 
 xxx
  |
+TXT, $result);
+    }
+
+    /**
+     * @test
+     */
+    public function print_tree_ten_levels(): void
+    {
+        $result = (new ChristmasTree())->print(10);
+
+        self::assertSame(<<<TXT
+         x         
+        xxx        
+       xxxxx       
+      xxxxxxx      
+     xxxxxxxxx     
+    xxxxxxxxxxx    
+   xxxxxxxxxxxxx   
+  xxxxxxxxxxxxxxx  
+ xxxxxxxxxxxxxxxxx 
+xxxxxxxxxxxxxxxxxxx
+         |
 TXT, $result);
     }
 }
