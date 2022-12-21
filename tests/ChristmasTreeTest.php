@@ -18,4 +18,17 @@ class ChristmasTreeTest extends TestCase
 
         self::assertSame('', $result);
     }
+
+    /**
+     * @test
+     */
+    public function print_tree_one_level(): void
+    {
+        $result = (new ChristmasTree())->print(1);
+
+        self::assertSame(<<<TXT
+x
+|
+TXT, $result);
+    }
 }
