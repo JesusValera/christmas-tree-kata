@@ -13,8 +13,16 @@ class ChristmasTree
 x
 |
 TXT;
-
         }
+
+        if ($number === 2) {
+            return <<<TXT
+ x
+xxx
+ |
+TXT;
+        }
+
         return '';
     }
 }

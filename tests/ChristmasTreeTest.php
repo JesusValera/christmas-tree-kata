@@ -31,4 +31,18 @@ x
 |
 TXT, $result);
     }
+
+    /**
+     * @test
+     */
+    public function print_tree_two_levels(): void
+    {
+        $result = (new ChristmasTree())->print(2);
+
+        self::assertSame(<<<TXT
+ x
+xxx
+ |
+TXT, $result);
+    }
 }
