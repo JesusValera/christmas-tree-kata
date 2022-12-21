@@ -1,0 +1,28 @@
+{
+    "name": "jesusvalera/christmas-tree-kata",
+    "require": {
+        "php": ">=8.0"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.2",
+        "phpunit/phpunit": "^9.5",
+        "vimeo/psalm": "^4.3",
+        "friendsofphp/php-cs-fixer": "^3.13"
+    },
+    "autoload": {
+        "psr-4": {
+            "ChristmasTreeKata\\": "src",
+            "ChristmasTreeKataTests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test-all": [
+            "@csrun",
+            "@test-unit"
+        ],
+        "test-unit": "./vendor/bin/phpunit",
+        "test-coverage": "XDEBUG_MODE=coverage ./vendor/bin/phpunit --coverage-html coverage",
+        "csfix": "./vendor/bin/php-cs-fixer fix",
+        "csrun": "./vendor/bin/php-cs-fixer fix --dry-run"
+    }
+}
